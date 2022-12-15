@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Encuesta Fútbol Sala Madrid</h1>
+        <p id="description" class="description text-center">
+          Gracias por tomarse el tiempo de llenar éste formulario para mejorar nuestros servicios!
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Escribe tu nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Escribe tu Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Edad<span class="clue">(opcional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="18"
+            max="99"
+            class="form-control"
+            placeholder="Edad"
+          />
+        </div>
+        <div class="form-group">
+          <p>Qué opción describe mejor tu frecuencia de actividad con Fútbol Sala Madrid?</p>
+          <select id="dropdown" name="frecuency" class="form-control" required>
+            <option disabled selected value>Elegir frecuencia actual</option>
+            <option value="semestre">Una vez por semestre</option>
+            <option value="mensual">Una vez al mes</option>
+            <option value="semanal">Una vez por semana</option>
+            <option value="semanalmas">Varias veces a la semana</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Recomendarías Futbol Sala Madrid a un amigo/a?</p>
+          <label>
+            <input
+              name="recomendacion-usuario"
+              value="definitivamente"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitivamente</label
+          >
+          <label>
+            <input
+              name="recomendacion-usuario"
+              value="quizas"
+              type="radio"
+              class="input-radio"
+            />Quizás</label
+          >
+
+          <label
+            ><input
+              name="recomendacion-usuario"
+              value="no-estoy-seguro"
+              type="radio"
+              class="input-radio"
+            />No estoy seguro/a</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>
+            Qué te gustaría que mejoremos?
+            <span class="clue">(Apunta todas las opciones que quieras)</span>
+          </p>
+
+          <label
+            ><input
+              name="mejoras"
+              value="organizacion"
+              type="checkbox"
+              class="input-checkbox"
+            />Organización</label
+          >
+          <label>
+            <input
+              name="mejoras"
+              value="frecuencia"
+              type="checkbox"
+              class="input-checkbox"
+            />Frecuencia de partidos</label
+          >
+          <label
+            ><input
+              name="mejoras"
+              value="nivel"
+              type="checkbox"
+              class="input-checkbox"
+            />Partidos de nivel</label
+          >
+          <label
+            ><input
+              name="mejoras"
+              value="suplementos"
+              type="checkbox"
+              class="input-checkbox"
+            />Suplementos adicionales (pelotas, petos, etc.)</label
+          >
+          <label
+            ><input
+              name="mejoras"
+              value="comunicacion"
+              type="checkbox"
+              class="input-checkbox"
+            />Comunicación</label
+          >
+          
+        </div>
+
+        <div class="form-group">
+          <p>Algún comentario o sugerencia?</p>
+          <textarea
+            id="comentarios"
+            class="input-textarea"
+            name="comentarios"
+            placeholder="Escribe tu comentario aquí..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
